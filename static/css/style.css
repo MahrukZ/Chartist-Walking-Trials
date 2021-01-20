@@ -1,0 +1,136 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+  margin-bottom: 110px;
+}
+
+/* hide outlines */
+* {
+  outline: 0 !important;
+}
+
+.navbar-brand {
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+}
+
+.jumbotron {
+  background-image: url('/static/assets/header.png');
+  background-size: cover;
+  position: relative;
+}
+
+/* Adapted from code example at https://stackoverflow.com/a/47578102 */
+.jumbotron > .overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.jumbotron > .inner {
+    position: relative;
+    z-index: 2;
+}
+
+.jumbotron h1, .jumbotron p {
+  color: white;
+}
+
+.jumbotron h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.jumbotron p.lead {
+  margin-bottom: 1rem;
+}
+
+.jumbotron p.sub {
+  margin-bottom: 2rem;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  background: #eee;
+  height: 70px;
+  line-height: 70px;
+  width: 100%;
+}
+
+main > figure {
+  display: inline-block;
+}
+
+main > figure > figcaption {
+  background: #eee;
+  border-left: 5px solid #ccc;
+  padding: 8px 16px;
+  margin-top: 10px;
+  border-radius: 5px;
+  font-style: italic;
+}
+
+main a {
+  font-weight: 600;
+}
+
+#map a {
+  font-weight: 400;
+}
+
+.fas {
+  margin-right: 5px;
+}
+
+.lang {
+  margin-left: 1rem;
+  margin-top: 6px;
+}
+
+.lang img {
+  height: 24px;
+}
+
+.navbar-collapse.show .lang {
+  margin-left: 0;
+  padding-bottom: 1rem;
+}
+
+@media only screen and (max-width: 1200px)  {
+
+  body {
+    margin-bottom: 0;
+  }
+
+  footer {
+    position: relative;
+    bottom: auto;
+    background: #eee;
+    height: auto;
+    line-height: 3rem;
+    width: 100%;
+    margin-top: 2rem;
+    padding: 1rem 1rem 1.5rem 1rem;
+    text-align: center;
+  }
+
+  footer .row {
+    display: inline-block;
+    margin: auto;
+  }
+
+  footer .col {
+    width: auto;
+    display: inline;
+    text-align: left !important;
+  }
+
+}

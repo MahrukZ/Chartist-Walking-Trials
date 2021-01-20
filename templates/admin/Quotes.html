@@ -1,0 +1,40 @@
+{%extends 'admin/admin.html'%}
+
+{% block title%}
+Quotes
+{%endblock%}
+
+{% block content%}
+
+
+<h3>  Add quotes </h3>
+<br>
+
+<form method= "POST" action="/admin/Quotes">
+
+    <input class="form-control" type="text" name="quote" placeholder="enter quote"/><br>
+    <input class="form-control" type="text" name="cite" placeholder="enter cite"/><br>
+    <button class="btn btn-primary" type="submit" name="submit" value="Add"> Add Quote  </button>
+    </form>
+
+  <hr>
+
+<h3> Edit quotes </h3>
+<br>
+  <table class="table">
+  {%for item in data%}
+  <TR>
+    <form method="POST">
+     <TD class="c1"><input type="text" name="quote" value="{{item[1]}}" class="form-control"></TD>
+     <TD class="c2"><input type="text" name="cite" value="{{item[2]}}" class="form-control"></td>
+     <TD class="c3">
+         <input type="hidden" name="id" value="{{item[0]}}">
+         <input type="SUBMIT" name="submit" value="Edit" class="btn btn-primary">
+         <input type="SUBMIT" name="submit" value="Remove" class="btn btn-danger">
+     </td>
+     </form>
+  </TR>
+  {% endfor %}
+  </table>
+
+{%endblock%}

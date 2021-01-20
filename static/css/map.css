@@ -1,0 +1,140 @@
+/* map specific css styles */
+
+/* hide outlines */
+* {
+  outline: 0 !important;
+}
+
+#map {
+  min-height: 790px;
+  height: 90vh;
+  border-radius: 1rem;
+  background: #eee url('/static/assets/spinner.gif') no-repeat center; /* Spinner built using https://loading.io/ */
+}
+
+#map.small {
+  height: 60vh;
+}
+
+#map.crosshair {
+  cursor: crosshair !important;
+}
+
+/* Pulsating marker code adapted from https://jsfiddle.net/3rhzn1au/ */
+.pulse {
+    display: block;
+    border-radius: 50%;
+    margin: 0;
+    width: 20px;
+    height: 20px;
+    background: #007bff;
+    color: #007bff;
+    border: 3px solid #fff;
+    box-shadow: 0 0 0 #007bff;
+    cursor: pointer;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    -moz-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 0 0;
+  }
+  70% {
+      -moz-box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+      box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+  }
+  100% {
+      -moz-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+
+.leaflet-div-icon {
+  background: rgba(0,0,0,0);
+  border: none;
+}
+/* end reference */
+
+.star {
+  font-size: 20px;
+  margin-top: -13px;
+  display: inline-block;
+  color: #007bff;
+  transition: all .5s;
+}
+
+.star.red {
+  color: red;
+}
+
+.star:before {
+  content: '\2605';
+}
+
+.outlined .star {
+  transform: scale(2);
+  -webkit-text-fill-color: #007bff;
+  -webkit-text-stroke-width: 1.3px;
+  -webkit-text-stroke-color: #8ebdff;
+}
+
+.outlined .star.red {
+  -webkit-text-fill-color: red;
+  -webkit-text-stroke-color: #ff8e88;
+}
+
+.leaflet-routing-container .star {
+  margin-top: -2px;
+  font-size: 14px;
+}
+/* end reference */
+
+.leaflet-div-icon {
+  background: rgba(0,0,0,0) !important;
+  border: none !important;
+}
+
+.leaflet-popup-content {
+  margin: 19px 13px 13px 13px;
+  font-size: 13px;
+  color: #6c757d;
+}
+
+.leaflet-popup-content strong {
+  font-weight: 500;
+  font-size: 14px;
+  color: #212529;
+}
+
+.leaflet-popup-content img {
+  margin-top: 10px;
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.info {
+  width: 30px;
+  height: 30px;
+  display: block;
+  margin-left: -5px;
+  margin-top: -8px;
+}
+
+.popup-link {
+  cursor: zoom-in;
+}
+
+.hidden {
+  display: none;
+}
+
+.current-location {
+  left: 4px;
+  margin-top: 24px;
+}
+
+.leaflet-routing-alt, .leaflet-routing-geocoders, .leaflet-routing-error {
+  max-height: 205px;
+}

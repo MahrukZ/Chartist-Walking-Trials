@@ -1,0 +1,57 @@
+{%extends 'homepage.html'%}
+
+{% block title%}
+{{ _('About Chartists') }}
+{%endblock%}
+
+{% block content%}
+<h2>{{ _('To the men and women of Newport') }}</h2>
+<p>{{ _('Did you know that around 22 men were shot
+dead on a Newport street in 1839? They
+were Chartists. They were demonstrating for
+freedoms we take for granted today.') }}</p>
+
+<p>{{ _('The Newport story starts in 1839 when thousands of
+working men gathered in the South Wales Valleys
+and marched on Newport through a cold and wet
+November night. The exact motives for the march
+are debatable. Some, including John Frost, were
+protesting about the injustices and asking for the
+release of fellow Chartists. Others were intent on
+creating an uprising.') }}</p>
+
+<a href="https://www.newportrising.co.uk/" target="_blank">newportrising</a>
+
+<p>{{ _('Chartism a national movement trying to improve the
+living and working conditions for all through
+Parliamentary Reform.') }}</p>
+
+<p>{{ _('“The People’s Charter” consisted
+of six demands:') }}</p>
+
+<p>
+  <ul>
+    <li>{{ _('Secret ballot') }}</li>
+    <li>{{ _('Votes for all men over 21') }}</li>
+    <li>{{ _('Payment for MPs') }}</li>
+    <li>{{ _('Equal size constituencies') }}</li>
+    <li>{{ _('No property qualification for MPs') }}</li>
+    <li>{{ _('Annual Parliamentary elections') }}</li>
+  </ul>
+
+{{ _('Further information can be found on:') }}
+<a href="http://www.our-chartist-heritage.co.uk/" target="_blank">{{ _('Link') }}</a>
+</p>
+
+<figure>
+  <img src="/static/assets/chartist.jpg" alt="Chartists"  height="300">
+  <figcaption>{{ _('The Chartist Petition (1843)') }}</figcaption>
+</figure>
+
+<figure>
+  <img src="/static/assets/song.jpg" alt="Chartists"  height="300">
+  <figcaption>{{ _('Chartists Song') }}</figcaption>
+</figure>
+
+
+{%endblock%}

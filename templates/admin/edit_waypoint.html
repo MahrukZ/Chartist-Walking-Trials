@@ -1,0 +1,110 @@
+{%extends 'admin/admin.html'%}
+
+{% block title%}
+Edit Waypoint
+{%endblock%}
+
+{% block content%}
+<div class="row">
+  <div class="col-9">
+    <div id="map"></div>
+  </div>
+  <div class="col-3">
+    <form method="POST" enctype="multipart/form-data">
+      <input type="hidden" id="id" name="id" value="" required>
+      <div class="mb-3">
+        <label for="route"><strong>Select Route</strong>...</label>
+        <div class="custom-control custom-radio">
+          <input id="1" name="route" value="1" type="radio" class="custom-control-input" required disabled>
+          <label class="custom-control-label" for="1">Easy Route</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input id="2" name="route" value="2" type="radio" class="custom-control-input" required disabled>
+          <label class="custom-control-label" for="2">Hard Route</label>
+        </div>
+      </div>
+
+      <div class="mb-3">
+          <label for="latitude">Latitude</label>
+          <input type="number" class="form-control" id="latitude" name="latitude" step="any" required disabled>
+      </div>
+      <div class="mb-3">
+          <label for="longitude">Longitude</label>
+          <input type="number" class="form-control" id="longitude" name="longitude" step="any" required disabled>
+      </div>
+      <div class="mb-4">
+          <button type="button" class="btn btn-primary btn-block" id="select-location" disabled><i class="fas fa-map-marker-alt"></i> Select Location</button>
+      </div>
+
+      <hr class="mb-4">
+
+      <div class="mb-3">
+        <label for="name">Name <span class="text-muted">(Optional)</span></label>
+        <input type="text" class="form-control" id="name" name="name" disabled>
+      </div>
+      <div class="mb-4">
+        <label for="description">Description <span class="text-muted">(Optional)</span></label>
+        <textarea class="form-control" id="description" name="description" disabled></textarea>
+      </div>
+
+      <hr class="mb-4">
+
+      <div class="mb-3">
+        <label for="welsh-name">Name <span class="text-muted">(Welsh Translation)</span> <span class="text-muted">(Optional)</span></label>
+        <input type="text" class="form-control" id="welsh-name" name="welsh-name" disabled>
+      </div>
+      <div class="mb-4">
+        <label for="welsh-description">Description <span class="text-muted">(Welsh Translation)</span> <span class="text-muted">(Optional)</span></label>
+        <textarea class="form-control" id="welsh-description" name="welsh-description" disabled></textarea>
+      </div>
+
+      <hr class="mb-4">
+
+      <div class="mb-3">
+        <label for="file">Image <span class="text-muted">(Optional)</span></label>
+        <div class="custom-file">
+
+          <!-- to determine whether to delete the image or not -->
+          <input type="hidden" name="remove-image" id="remove-image">
+
+          <input type="file" class="custom-file-input" id="file" name="file" disabled>
+          <label class="custom-file-label" for="file">Choose file...</label>
+
+          <div id="remove-btn"><i class="fas fa-trash"></i></div>
+
+        </div>
+      </div>
+
+      <hr class="mb-4">
+
+      <button class="btn btn-primary btn-lg btn-block" type="submit" name="submit" value="update" disabled>Update Waypoint</button>
+      <button class="btn btn-danger btn-lg btn-block" type="button" data-toggle="modal" data-target="#remove-modal" disabled>Remove Waypoint</button>
+
+      <!-- Code adapted from https://getbootstrap.com/docs/4.0/components/modal/ -->
+      <div class="modal fade" id="remove-modal" tabindex="-1" role="dialog" aria-labelledby="modal-label" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modal-label">Remove Waypoint</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>Are you sure that you want to remove this waypoint?</p>
+              <p class="m-0">
+                <strong>This action cannot be reversed.</strong>
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-danger" name="submit" value="remove">Remove Waypoint</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </form>
+  </div>
+</div>
+{%endblock%}

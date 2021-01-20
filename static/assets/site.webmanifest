@@ -1,0 +1,19 @@
+{
+    "name": "Chartists Walking Trail",
+    "short_name": "Chartists Walking Trail",
+    "icons": [
+        {
+            "src": "/assets/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/assets/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#007bff",
+    "background_color": "#007bff",
+    "display": "standalone"
+}

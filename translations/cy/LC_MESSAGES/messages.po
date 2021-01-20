@@ -1,0 +1,392 @@
+# Welsh translations for PROJECT.
+# Copyright (C) 2019 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2019-12-09 20:06+0000\n"
+"PO-Revision-Date: 2019-12-09 20:06+0000\n"
+"Last-Translator: \n"
+"Language: cy\n"
+"Language-Team: cy <LL@li.org>\n"
+"Plural-Forms: nplurals=5; plural=(n==1 ? 1 : n==2 ? 2 : n==3 ? 3 : n==6 ? 4 : 0);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+"X-Generator: Poedit 2.2.4\n"
+
+#: templates/404.html:4
+msgid "Page Not Found"
+msgstr "Tudalen Heb Darganfod"
+
+#: templates/404.html:9
+msgid "Hmm, something went wrong."
+msgstr "Hmm, aeth rhywbeth o'i le."
+
+#: templates/404.html:15
+msgid "Unfortunately, this page doesn't exist."
+msgstr "Yn anffodus, nid yw'r dudalen hon yn bodoli."
+
+#: templates/404.html:15
+#, python-format
+msgid "Please try heading back to the %(link)s or use the menu (at the top of the page) to find what you're looking for."
+msgstr "Ceisiwch fynd yn ôl i'r %(link)s neu defnyddiwch y ddewislen (ar frig y dudalen) i ddod o hyd i'r hyn rydych chi'n edrych amdano."
+
+#: templates/404.html:15
+msgid "<a href=\"/\">map</a>"
+msgstr "<a href=\"/\">map</a>"
+
+#: templates/404.html:16
+#, python-format
+msgid "Did you arrive here from a link you clicked on our website? Please %(link)s so that we can fix it!"
+msgstr "A wnaethoch chi gyrraedd yma o ddolen y gwnaethoch chi glicio ar ein gwefan? %(link)s os gwelwch yn dda,  fel y gallwn ei drwsio!"
+
+#: templates/404.html:16
+msgid "<a href=\"/contact\">let us know</a>"
+msgstr "<a href=\"/contact\">Gadewch i ni wybod</a>"
+
+#: templates/aboutus.html:4
+msgid "About Chartists"
+msgstr "Ynglŷn â Siartwyr"
+
+#: templates/aboutus.html:8
+msgid "To the men and women of Newport"
+msgstr "I ddynion a menywod Casnewydd"
+
+#: templates/aboutus.html:9
+msgid "Did you know that around 22 men were shot\n"
+"dead on a Newport street in 1839? They\n"
+"were Chartists. They were demonstrating for\n"
+"freedoms we take for granted today."
+msgstr "Oeddech chi'n gwybod bod tua 22 o ddynion wedi'u saethu\n"
+"ac wedi marw ar stryd yng Nghasnewydd ym 1839? Maent\n"
+"yn Siartwyr. Roeddent yn arddangos dros\n"
+"rhyddid a gymerwn yn ganiataol heddiw."
+
+#: templates/aboutus.html:14
+msgid "The Newport story starts in 1839 when thousands of\n"
+"working men gathered in the South Wales Valleys\n"
+"and marched on Newport through a cold and wet\n"
+"November night. The exact motives for the march\n"
+"are debatable. Some, including John Frost, were\n"
+"protesting about the injustices and asking for the\n"
+"release of fellow Chartists. Others were intent on\n"
+"creating an uprising."
+msgstr "Mae stori Casnewydd yn cychwyn ym 1839 pan ymgasglodd miloedd o\n"
+"dynion sy'n gweithio yng Nghymoedd De Cymru\n"
+"a gorymdeithio ar Gasnewydd trwy annwyd a gwlyb\n"
+"Noson Tachwedd. Yr union gymhellion ar gyfer yr orymdaith\n"
+"yn ddadleuol. Roedd rhai, gan gynnwys John Frost, yn\n"
+"protestio am yr anghyfiawnderau a gofyn am y\n"
+"rhyddhau cyd-Siartwyr. Roedd eraill yn benderfynol\n"
+"creu gwrthryfel."
+
+#: templates/aboutus.html:25
+msgid "Chartism a national movement trying to improve the\n"
+"living and working conditions for all through\n"
+"Parliamentary Reform."
+msgstr "Mudiad cenedlaethol oedd Siartiaeth yn ceisio gwella'r\n"
+"amodau byw a gweithio i bawb drwyddo\n"
+"Diwygio Seneddol."
+
+#: templates/aboutus.html:29
+msgid "“The People’s Charter” consisted\n"
+"of six demands:"
+msgstr "Roedd \"Siarter y Bobl\" yn cynnwys\n"
+"o chwe galw:"
+
+#: templates/aboutus.html:34
+msgid "Secret ballot"
+msgstr "Pleidlais gyfrinachol"
+
+#: templates/aboutus.html:35 templates/quiz.html:116
+msgid "Votes for all men over 21"
+msgstr "Pleidleisiau i bob dyn dros 21 oed"
+
+#: templates/aboutus.html:36
+msgid "Payment for MPs"
+msgstr "Taliad i ASau"
+
+#: templates/aboutus.html:37
+msgid "Equal size constituencies"
+msgstr "Etholaethau maint cyfartal"
+
+#: templates/aboutus.html:38
+msgid "No property qualification for MPs"
+msgstr "Dim cymhwyster eiddo ar gyfer ASau"
+
+#: templates/aboutus.html:39
+msgid "Annual Parliamentary elections"
+msgstr "Etholiadau Seneddol blynyddol"
+
+#: templates/aboutus.html:42
+msgid "Further information can be found on:"
+msgstr "Mae mwy o wybodaeth ar:"
+
+#: templates/aboutus.html:43
+msgid "Link"
+msgstr "Dolen"
+
+#: templates/aboutus.html:48
+msgid "The Chartist Petition (1843)"
+msgstr "Deiseb y Siartwyr (1843)"
+
+#: templates/aboutus.html:53
+msgid "Chartists Song"
+msgstr "Cân y Siartwyr"
+
+#: templates/contact.html:3
+msgid "Contact Us"
+msgstr "Cysylltwch â Ni"
+
+#: templates/contact.html:7
+msgid "If you have any Further questions about the walk, please fill in the form below!"
+msgstr "Os oes gennych unrhyw gwestiynau pellach am y daith gerdded, llenwch y ffurflen isod!"
+
+#: templates/feedback.html:4 templates/homepage.html:67
+msgid "Feedback"
+msgstr "Adborth"
+
+#: templates/feedback.html:8
+msgid "We'd love to hear your feedback! Let us know about your experience of using our new website."
+msgstr "Byddem wrth ein bodd yn clywed eich adborth! Gadewch inni wybod am eich profiad o ddefnyddio ein gwefan newydd."
+
+#: templates/feedback.html:16
+msgid "Name"
+msgstr "Enw"
+
+#: templates/feedback.html:20
+msgid "what star rating would you give the website? (with 5 being excellent)"
+msgstr "pa sgôr seren fyddech chi'n ei rhoi i'r wefan? (gyda 5 yn rhagorol)"
+
+#: templates/feedback.html:21 templates/feedback.html:31
+#: templates/feedback.html:41
+msgid "One"
+msgstr "Un"
+
+#: templates/feedback.html:22 templates/feedback.html:32
+#: templates/feedback.html:42
+msgid "Two"
+msgstr "Dau"
+
+#: templates/feedback.html:23 templates/feedback.html:33
+#: templates/feedback.html:43
+msgid "Three"
+msgstr "Tri"
+
+#: templates/feedback.html:24 templates/feedback.html:34
+#: templates/feedback.html:44
+msgid "Four"
+msgstr "Pedwar"
+
+#: templates/feedback.html:25 templates/feedback.html:35
+#: templates/feedback.html:45
+msgid "Five"
+msgstr "Pump"
+
+#: templates/feedback.html:30
+msgid "How easy was it to follow the map and go to the differnt location? (with 5 being very easy)"
+msgstr "Pa mor hawdd oedd dilyn y map a mynd i'r lleoliad gwahanol? (gyda 5 yn hawdd iawn)"
+
+#: templates/feedback.html:40
+msgid "Out of 5 would you do the walk again? (with 5 being very likely)"
+msgstr "Allan o 5 fyddech chi'n gwneud y daith gerdded eto? (gyda 5 yn debygol iawn)"
+
+#: templates/feedback.html:49
+msgid "enter feedback Message (optional)"
+msgstr "nodwch neges adborth (dewisol)"
+
+#: templates/feedback.html:51
+msgid "Submit feedback"
+msgstr "Anfon adborth"
+
+#: templates/homepage.html:43 templates/homepage.html:50
+msgid "Chartists Walking Trail"
+msgstr "Llwybr Cerdded y Siartwyr"
+
+#: templates/homepage.html:58
+msgid "Home"
+msgstr "Hafan"
+
+#: templates/homepage.html:61
+msgid "About"
+msgstr "Amdanom"
+
+#: templates/homepage.html:64 templates/quiz.html:4
+msgid "Quiz"
+msgstr "Cwis"
+
+#: templates/homepage.html:70
+msgid "Contact"
+msgstr "Cysylltu"
+
+#: templates/homepage.html:73
+msgid "Dashboard"
+msgstr "Dangosfwrdd"
+
+#: templates/homepage.html:90
+msgid "Chartism was a national movement trying to improve the living and working conditions for all through Parliamentary Reform."
+msgstr "Roedd Siartiaeth yn fudiad cenedlaethol a geisiodd wella amodau byw a gweithio i bawb trwy Ddiwygio Seneddol."
+
+#: templates/homepage.html:94
+msgid "Read more"
+msgstr "Darllen mwy"
+
+#: templates/homepage.html:126 templates/login.html:39
+#, python-format
+msgid "Copyright %(year)s Chartist Walking Trail."
+msgstr "Hawlfraint %(year)s Llwybr Cerdded y Siartwyr."
+
+#: templates/quiz.html:10
+msgid "Quiz Questions"
+msgstr "Cwestiynau Cwis"
+
+#: templates/quiz.html:18
+msgid "Question 1."
+msgstr "Cwestiwn 1."
+
+#: templates/quiz.html:20
+msgid "Who are Chartists?"
+msgstr "Pwy yw Siartwyr?"
+
+#: templates/quiz.html:24
+msgid "32 men were shot dead on a queen street"
+msgstr "Saethwyd 32 o ddynion ar stryd frenhines"
+
+#: templates/quiz.html:26
+msgid "32 men were shot dead on a newport street"
+msgstr "Saethwyd 32 o ddynion ar stryd Casnewydd"
+
+#: templates/quiz.html:28
+msgid "32 men were shot dead on a canada street "
+msgstr "Saethwyd 32 o ddynion ar stryd canada"
+
+#: templates/quiz.html:36
+msgid "Question 2 "
+msgstr "Cwestiwn 2."
+
+#: templates/quiz.html:38
+msgid "In which year, Chartists were dead? "
+msgstr "Ym mha flwyddyn, roedd Siartwyr wedi marw?"
+
+#: templates/quiz.html:54
+msgid "Question 3. "
+msgstr "Cwestiwn 3."
+
+#: templates/quiz.html:56
+msgid "For what purpose were they demonstrating for? "
+msgstr "At ba bwrpas yr oeddent yn arddangos?"
+
+#: templates/quiz.html:60
+msgid "rights"
+msgstr "hawliau"
+
+#: templates/quiz.html:62
+msgid "change of government"
+msgstr "newid llywodraeth"
+
+#: templates/quiz.html:64
+msgid "freedom "
+msgstr "rhyddid"
+
+#: templates/quiz.html:72
+msgid "Question 4."
+msgstr "Cwestiwn 4."
+
+#: templates/quiz.html:74
+msgid "Define Chartism? "
+msgstr "Diffinio Siartiaeth?"
+
+#: templates/quiz.html:78
+msgid "Chartism a national movement trying to improve the living and working conditions for all through Parliamentary Reform "
+msgstr "Roedd Chartism yn fudiad cenedlaethol a geisiodd wella amodau byw a gweithio i bawb trwy Ddiwygio Seneddol"
+
+#: templates/quiz.html:80
+msgid "Chartism an international trying to improve the living conditions for all through Parliamentary Reform "
+msgstr "Roedd Siartiaeth yn rhyngwladol a geisiodd wella'r amodau byw i bawb trwy Ddiwygio Seneddol"
+
+#: templates/quiz.html:82
+msgid "Chartism a national movement trying to improve the health conditions for all through Parliamentary Reform "
+msgstr "Mudiad cenedlaethol oedd Siartiaeth yn ceisio gwella'r cyflyrau iechyd i bawb trwy Ddiwygio Seneddol"
+
+#: templates/quiz.html:90
+msgid "Question 5. "
+msgstr "Cwestiwn 5."
+
+#: templates/quiz.html:92
+msgid "How many demands did “people’s Charter” consisted of? "
+msgstr "Faint o alwadau oedd “Siarter y pobl” yn eu cynnwys?"
+
+#: templates/quiz.html:108
+msgid "Question 6."
+msgstr "Cwestiwn 6."
+
+#: templates/quiz.html:110
+msgid "Which one can be a chartist demand? "
+msgstr "Pa un all fod yn alw siarter?"
+
+#: templates/quiz.html:114
+msgid "open ballot"
+msgstr "pleidlais agored"
+
+#: templates/quiz.html:118
+msgid "Votes for all men over 18"
+msgstr "Pleidleisiau i bob dyn dros 18 oed"
+
+#: templates/quiz.html:125
+msgid "Question 7."
+msgstr "Cwestiwn 7."
+
+#: templates/quiz.html:127
+msgid "Where did working men (chartists) gathered? "
+msgstr "Ble casglodd dynion gwaith (siartwyr)?"
+
+#: templates/quiz.html:131
+msgid "Cardiff"
+msgstr "Caerdydd"
+
+#: templates/quiz.html:133
+msgid "south wales"
+msgstr "de cymru"
+
+#: templates/quiz.html:135
+msgid "Swansea"
+msgstr "Abertawe"
+
+#: templates/quiz.html:143
+msgid "Question 8."
+msgstr "Cwestiwn 8."
+
+#: templates/quiz.html:145
+msgid "Which street were Chartists shot on?"
+msgstr "Ar ba stryd y saethwyd Siartwyr?"
+
+#: templates/quiz.html:149
+msgid "Bristol street"
+msgstr "Stryd Bryste"
+
+#: templates/quiz.html:151
+msgid "Canada street"
+msgstr "Stryd Canada"
+
+#: templates/quiz.html:153
+msgid "Newport street"
+msgstr "Stryd Casnewydd"
+
+#: templates/quiz.html:162
+msgid "Grade Me"
+msgstr "Graddio Fi"
+
+#: templates/quiz.html:164
+msgid "Clear"
+msgstr "Ail gychwyn"
+
+#~ msgid "Submit feedback"
+#~ msgstr "Anfon adborth"
+
+#~ msgid "Homepage"
+#~ msgstr "Hafan"

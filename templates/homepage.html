@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+
+<html lang="{{ get_locale() }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- https://getbootstrap.com -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    {% if request.path == "/" %}
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" />
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-basemaps@0.3.4/L.Control.Basemaps.css" />
+    <link rel="stylesheet" href="/static/css/map.css">
+    {%endif%}
+
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+
+    <!-- Generated using https://realfavicongenerator.net/ -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/assets/favicon-16x16.png">
+    <link rel="manifest" href="/static/assets/site.webmanifest">
+    <link rel="mask-icon" href="/static/assets/safari-pinned-tab.svg" color="#007bff">
+    <link rel="shortcut icon" href="/static/assets/favicon.ico">
+    <meta name="apple-mobile-web-app-title" content="Chartists Walking Trail">
+    <meta name="application-name" content="Chartists Walking Trail">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="/assets/browserconfig.xml">
+    <meta name="theme-color" content="#007bff">
+
+    <!-- Specify language for use in JS localisation -->
+    <script>
+    var lang = "{{ get_locale() }}";
+    </script>
+
+    <title>{%block title%}{{ _('Chartists Walking Trail') }}{%endblock%}</title>
+  </head>
+  <body>
+
+    <!-- Navbar adapted from code examples at https://getbootstrap.com/docs/4.3/components/navbar/ -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="/">{{ _('Chartists Walking Trail') }}</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbar">
+          <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+            <li class="nav-item{% if request.path == '/'%} active{%endif%}">
+              <a class="nav-link" href="/">{{ _('Home') }}{% if request.path == '/'%} <span class="sr-only">(current)</span>{%endif%}</a>
+            </li>
+            <li class="nav-item{% if request.path == '/aboutus'%} active{%endif%}">
+              <a class="nav-link" href="/aboutus">{{ _('About') }} {% if request.path == '/aboutus'%} <span class="sr-only">(current)</span>{%endif%}</a>
+            </li>
+            <li class="nav-item{% if request.path == '/quiz'%} active{%endif%}">
+              <a class="nav-link" href="/quiz">{{ _('Quiz') }} {% if request.path == '/quiz'%} <span class="sr-only">(current)</span>{%endif%}</a>
+            </li>
+            <li class="nav-item{% if request.path == '/feedback'%} active{%endif%}">
+              <a class="nav-link" href="/feedback">{{ _('Feedback') }}{% if request.path == '/feedback'%} <span class="sr-only">(current)</span>{%endif%}</a>
+            </li>
+            <li class="nav-item{% if request.path == '/contact'%} active{%endif%}">
+              <a class="nav-link" href="/contact">{{ _('Contact') }}{% if request.path == '/contact'%} <span class="sr-only">(current)</span>{%endif%}</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/login">{{ _('Dashboard') }}</a>
+            </li>
+            <li class="nav-item lang">
+              <!-- Icons made by Freepik from www.flaticon.com -->
+              <a href="/en"><img src="/static/assets/en.png" alt="English" title="English"></a>
+              <a href="/cy"><img src="/static/assets/cy.png" alt="Welsh" title="Welsh"></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="jumbotron">
+      <div class="overlay"></div>
+      <div class="container inner">
+        <h1 class="display-4">{{self.title()}}</h1>
+
+        <p class="lead">{% block description%}{{ _('Chartism was a national movement trying to improve the living and working conditions for all through Parliamentary Reform.') }} {%endblock%}</p>
+
+        {% if data %}<p class="sub">"{{data[0]}}" - <cite>{{data[1]}}</cite></p>{%endif%}
+        {% if request.path == "/" %}
+        <a class="btn btn-primary btn-lg" href="/aboutus" role="button">{{ _('Read more') }}</a>
+        {%endif%}
+      </div>
+    </div>
+
+    <div class="container">
+      <main>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+          {% if messages %}
+            {% for category, message in messages %}
+              {% if category == 'message' %}
+              <div class="alert alert-success" role="alert">
+              {% else %}
+              <div class="alert alert-{{ category }}" role="alert">
+              {% endif %}
+              {{ message }}
+              </div>
+            {% endfor %}
+          {% endif %}
+        {% endwith %}
+
+        {% block content%}
+        <div id="map"></div>
+        {%endblock%}
+      </main>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+        <div class="col">
+          &copy; {{ _('Copyright %(year)s Chartist Walking Trail.', year=now.year) }}
+        </div>
+
+        <div class="col" style="text-align:center;">
+                <a href= "https://www.paypal.com/donate/?token=j2UNc-W4GEkzpNh_1IOhEGNhNaSBaELUtk9XupTL9rBZgPDqxfsWNxqIvHQ8kBCVAocRam&country.x=GB&locale.x=GB" target="_blank" class="btn btn-primary">  <i class="fab fa-paypal "> </i> Support Us</a>
+            </div>
+
+              <div class="col" style="text-align:right;">
+
+
+        
+
+              <a href= "https://twitter.com/NPChartists?lang=en-gb" target="_blank" style="color:#1DA1F2"><i class="fab fa-twitter"></i></a>
+              <a href= "https://www.facebook.com/NPChartists/" target="_blank" style="color:#4267b2"><i class="fab fa-facebook-f"></i></a>
+
+            </div>
+
+
+            </span>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    {% if request.path == "/" %}
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+   integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+   crossorigin=""></script>
+    <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+    <script src="https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet-basemaps@0.3.4/L.Control.Basemaps-min.js"></script>
+    <script src="/static/js/salesman.js"></script>
+    <script src="/static/js/map.js"></script>
+    {% elif request.path == "/feedback" %}
+    <script src="/static/js/feedback.js"></script>
+    {%endif%}
+
+  </body>
+</html>

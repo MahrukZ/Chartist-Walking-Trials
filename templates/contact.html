@@ -1,0 +1,33 @@
+{%extends 'homepage.html'%}
+{%block title%}
+{{ _('Contact Us') }}
+{%endblock%}
+
+{% block description%}
+{{ _('If you have any Further questions about the walk, please fill in the form below!') }}
+{%endblock%}
+
+{%block content%}
+
+<form action="/feedback" method= "POST" name="myform" >
+  <div class="row">
+
+      <input  type="text" class="form-control" placeholder="Name" name = "firstname" maxlength="20" minlength="3" required >
+      <br>
+      <br>
+      <input  type="email" class="form-control" placeholder="eMail" name = "eMail" maxlength="20" minlength="3" required >
+      <br>
+      <br>
+      <input  type="text" class="form-control" placeholder="Subject" name = "Subject" maxlength="20" minlength="3" required >
+      <br>
+      <br>
+      <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="enter  Message" name = "message" rows="3"  required ></textarea>
+      <br>
+      <br>
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Send</button>
+  </div>
+</form>
+
+
+
+{%endblock%}

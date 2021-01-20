@@ -1,0 +1,17 @@
+{%extends 'homepage.html'%}
+
+{% block title%}
+{{ _('Page Not Found') }}
+{%endblock%}
+
+
+{% block description%}
+{{ _('Hmm, something went wrong.') }}
+{%endblock%}
+
+{% block content%}
+<br>
+<!-- Links using flask-babel translation code adapted from https://stackoverflow.com/a/9837728 -->
+<p><b>{{ _("Unfortunately, this page doesn't exist.") }}</b> {{ _("Please try heading back to the %(link)s or use the menu (at the top of the page) to find what you're looking for.", link=('<a href="roadmap.html">%s</a>' % _('<a href="/">map</a>'))|safe) }} </p>
+<p><small>{{ _('Did you arrive here from a link you clicked on our website? Please %(link)s so that we can fix it!', link=('<a href="roadmap.html">%s</a>' % _('<a href="/contact">let us know</a>'))|safe) }} </small></p>
+{%endblock%}

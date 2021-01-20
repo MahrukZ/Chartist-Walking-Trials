@@ -1,0 +1,24 @@
+{%extends 'admin/admin.html'%}
+
+
+{% block title%}
+Feedback
+{%endblock%}
+
+{% block content%}
+{% for row in data  %}
+
+  <table method="get" class="table table-striped ">
+    <tr>
+      <td><div class="person">
+        <p> <strong>Name: {{row[1]}} </strong></p>
+      </div></td>
+      <td>
+      <div class="<Review">
+        <p> <strong>feedback Review 2:</strong> </p>
+          <p> {{row[2]}} </p>
+      </div>
+    </tr>
+
+{%endfor%}
+{%endblock%}

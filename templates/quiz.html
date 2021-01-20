@@ -1,0 +1,175 @@
+{%extends 'homepage.html'%}
+
+{% block title%}
+{{_('Quiz')}}
+
+{%endblock%}
+
+{% block content%}
+
+<center><h1>{{ _('Quiz Questions') }}</h1></center>
+
+<p>
+
+<form name="quiz" method="POST">
+
+<p>
+
+<b> {{ _('Question 1.') }}
+
+<label> <br>{{ _('Who are Chartists?') }} <br> </b>
+
+<blockquote>
+
+<label> <input type="radio" name="q1" value=a">{{ _('32 men were shot dead on a queen street') }} </label> <br>
+
+<label> <input type="radio" name="q1" value="b">{{ _('32 men were shot dead on a newport street') }} </label> <br>
+
+<label> <input type="radio" name="q1" value="c">{{ _('32 men were shot dead on a canada street ') }} </label> <br>
+
+</blockquote>
+
+
+
+<p><b>
+
+<hr>
+
+{{ _('Question 2 ') }}
+
+<br>{{ _('In which year, Chartists were dead? ') }}<br></b>
+
+<blockquote>
+
+<label> <input type="radio" name="q2" value="a ">1839 </label> <br>
+
+<label> <input type="radio" name="q2" value="b">1845  </label> <br>
+
+<label> <input type="radio" name="q2" value="c">1850 </label> <br>
+
+</blockquote>
+
+<p><b>
+
+<hr>
+
+{{ _('Question 3. ') }}
+
+<br>{{ _('For what purpose were they demonstrating for? ') }}<br></b>
+
+<blockquote>
+
+<label> <input type="radio" name="q3" value="a">{{ _('rights') }}</label> <br>
+
+ <label> <input type="radio" name="q3" value="b">{{ _('change of government') }} </label> <br>
+
+ <label> <input type="radio" name="q3" value="c">{{ _('freedom ') }}</label> <br>
+
+</blockquote>
+
+<p><b>
+
+<hr>
+
+{{ _('Question 4.') }}
+
+<br>{{ _('Define Chartism? ') }}<br></b>
+
+<blockquote>
+
+<label> <input type="radio" name="q4" value="a ">{{ _('Chartism a national movement trying to improve the living and working conditions for all through Parliamentary Reform ') }}</label> <br>
+
+<label> <input type="radio" name="q4" value="b">{{ _('Chartism an international trying to improve the living conditions for all through Parliamentary Reform ') }}</label> <br>
+
+<label> <input type="radio" name="q4" value="c">{{ _('Chartism a national movement trying to improve the health conditions for all through Parliamentary Reform ') }}</label> <br>
+
+</blockquote>
+
+<p><b>
+
+<hr>
+
+{{ _('Question 5. ') }}
+
+<br>{{ _('How many demands did “people’s Charter” consisted of? ') }}<br></b>
+
+<blockquote>
+
+<label> <input type="radio" name="q5" value="a">9</label> <br>
+
+<label> <input type="radio" name="q5" value="b">6</label> <br>
+
+<label> <input type="radio" name="q5" value="c">2 </label> <br>
+
+</blockquote>
+
+<p><b>
+
+<hr>
+
+{{ _('Question 6.') }}
+
+<br>{{ _('Which one can be a chartist demand? ') }}<br></b>
+
+<blockquote>
+
+<label> <input type="radio" name="q6" value="a ">{{ _('open ballot') }}</label> <br>
+
+<label> <input type="radio" name="q6" value="b ">{{ _('Votes for all men over 21') }}</label> <br>
+
+<label> <input type="radio" name="q6" value="c">{{ _('Votes for all men over 18') }} </label> <br>
+
+</blockquote>
+
+<p><b>
+  <hr>
+
+{{ _('Question 7.') }}
+
+<br>{{ _('Where did working men (chartists) gathered? ') }}<br></b>
+
+<blockquote>
+
+ <label> <input type="radio" name="q7" value="a">{{ _('Cardiff') }}</label> <br>
+
+<label> <input type="radio" name="q7" value="b">{{ _('south wales') }}</label> <br>
+
+<label> <input type="radio" name="q7" value="c">{{ _('Swansea') }}</label> <br>
+
+</blockquote>
+
+<p><b>
+
+<hr>
+
+{{ _('Question 8.') }}
+
+<br>{{ _('Which street were Chartists shot on?') }} <br></b>
+
+<blockquote>
+
+<label> <input type="radio" name="q8" value="a">{{ _('Bristol street') }}</label> <br>
+
+<label> <input type="radio" name="q8" value="b">{{ _('Canada street') }}</label> <br>
+
+<label> <input type="radio" name="q8" value="c">{{ _('Newport street') }}</label> <br>
+
+</blockquote>
+
+
+
+<hr>
+
+
+<input type="submit" value="{{ _('Grade Me') }}" class="btn btn-primary">
+
+<input type="reset" value="{{ _('Clear') }}"><p>
+
+
+</form>
+
+
+
+
+
+{%endblock%}

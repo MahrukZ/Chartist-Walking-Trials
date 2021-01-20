@@ -1,0 +1,58 @@
+{%extends 'homepage.html'%}
+
+{% block title%}
+{{ _('Feedback') }}
+{%endblock%}
+
+{% block description%}
+{{ _("We'd love to hear your feedback! Let us know about your experience of using our new website.") }}
+{%endblock%}
+
+{% block content%}
+
+
+<form action="/feedback" method= "POST" name="myform" >
+  <div class="row">
+      <input  type="text" class="form-control" placeholder="{{ _('Name') }}" name = "firstname" maxlength="20" minlength="3" required >
+      <br>
+      <br>
+      <select class="custom-select custom-select-sm" name="question1" required>
+        <option value="0" selected>{{ _('what star rating would you give the website? (with 5 being excellent)') }}</option>
+        <option value="1">{{ _('One') }}</option>
+        <option value="2">{{ _('Two') }}</option>
+        <option value="3">{{ _('Three') }}</option>
+        <option value="4">{{ _('Four') }}</option>
+        <option value="5">{{ _('Five') }}</option>
+      </select>
+      <br>
+      <br>
+      <select class="custom-select custom-select-sm"  name="question2" required>
+        <option value="0" selected>{{ _('How easy was it to follow the map and go to the differnt location? (with 5 being very easy)') }}</option>
+        <option value="1">{{ _('One') }}</option>
+        <option value="2">{{ _('Two') }}</option>
+        <option value="3">{{ _('Three') }}</option>
+        <option value="4">{{ _('Four') }}</option>
+        <option value="5">{{ _('Five') }}</option>
+      </select>
+      <br>
+      <br>
+      <select class="custom-select custom-select-sm" name="question3" required>
+        <option value="0" selected>{{ _('Out of 5 would you do the walk again? (with 5 being very likely)') }}</option>
+        <option value="1">{{ _('One') }}</option>
+        <option value="2">{{ _('Two') }}</option>
+        <option value="3">{{ _('Three') }}</option>
+        <option value="4">{{ _('Four') }}</option>
+        <option value="5">{{ _('Five') }}</option>
+      </select>
+      <br>
+      <br>
+      <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="{{ _('enter feedback Message (optional)') }}" name = "message" rows="3"  ></textarea>
+
+      <button class="btn btn-lg btn-primary btn-block" type="submit">{{ _('Submit feedback') }}</button>
+  </div>
+</form>
+
+
+
+
+{%endblock%}
